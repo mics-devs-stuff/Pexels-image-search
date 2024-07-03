@@ -8,13 +8,30 @@ defineProps<{
 function goToExternalLink(url: string) {
     window.open(url, '_blank');
 }
+
+function getTextColor(backgroundColor: string) {
+    const color = backgroundColor.replace('#', '');
+    const r = parseInt(color.substring(0, 2), 16);
+    const g = parseInt(color.substring(2, 4), 16);
+    const b = parseInt(color.substring(4, 6), 16);
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    return (brightness > 125) ? 'black' : 'white';
+}
+
 </script>
 
 <template>
     <div class="photo-card">
         <img :src="photo.src.medium" :alt="photo?.alt ?? undefined" class="image" @click="goToExternalLink(photo.url)">
         <div class="photographer" :style="{ background: photo?.avg_color ?? ''}" @click="goToExternalLink(photo.photographer_url)">
-            <span class="photographer-name">{{ photo.photographer }}</span>
+            <span 
+                :class="[
+                    'photographer-name',
+                    getTextColor((photo?.avg_color ?? '#FFFFFF')) === 'black' ? 'text-black' : 'text-white']
+                "
+            >
+                {{ photo.photographer }}
+            </span>
             <ArrowRightIcon class="icon"></ArrowRightIcon>
         </div>
     </div>
