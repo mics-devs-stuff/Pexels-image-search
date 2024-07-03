@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: "Roboto Mono", monospace;
+    min-height: 100%;
+}
+
+.masonry-column {
+    .masonry-item {
+        @apply m-3 hover:drop-shadow-lg;
+    }
+}

@@ -1,12 +1,36 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  runtimeConfig: {
-    // The private keys which are only available server-side
-    apiSecret: '2wYvpwBWJimjF7FW2hvyWmhBO5IAUCbT8kB8inWNGo36bcY7uSD4SOnN',
-    // Keys within public are also exposed client-side
-    public: {
-      apiBase: 'https://api.pexels.com/v1/'
-    }
-  }
+    devtools: { enabled: true },
+
+    runtimeConfig: {
+		// Keys within public are also exposed client-side
+		public: {
+			apiBase: 'https://api.pexels.com/v1/',
+			// The private keys which are only available server-side
+			pexelsApiKey: '2wYvpwBWJimjF7FW2hvyWmhBO5IAUCbT8kB8inWNGo36bcY7uSD4SOnN',
+		}
+	},
+
+    css: ['~/assets/css/main.css'],
+
+    postcss: {
+		plugins: {
+			tailwindcss: {},
+			autoprefixer: {},
+		},
+	},
+
+    app: {
+		head: {
+			script: [
+				{ src: 'https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js' },
+			],
+		}
+	},
+
+    plugins: [
+		{ src: '~/plugins/vue-masonry', mode: 'client' }
+	],
+
+    modules: ["nuxt-feather-icons"]
 })
