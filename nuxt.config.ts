@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 		public: {
 			apiBase: 'https://api.pexels.com/v1/',
 			// The private keys which are only available server-side
-			pexelsApiKey: '2wYvpwBWJimjF7FW2hvyWmhBO5IAUCbT8kB8inWNGo36bcY7uSD4SOnN',
+			pexelsApiKey: process.env.PEXELS_API_KEY,
 		}
 	},
 
