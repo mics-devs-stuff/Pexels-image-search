@@ -1,7 +1,6 @@
 <script setup lang="js">
 const showButton = ref(false);
 
-
 /**
  * Scrolls to the top of the page
  */

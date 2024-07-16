@@ -35,6 +35,10 @@ function registerScroll () {
 
 function performSearch () {
 	if (query.value !== '') {
+		/**
+		 * This is needed to orevent the infinite scroll to add the new searched photos
+		 * to the old search results
+		 */
 		if ((query.value !== oldQuery) && oldQuery !== '' ) {
 			resetRefs();
 			oldQuery = query.value;
