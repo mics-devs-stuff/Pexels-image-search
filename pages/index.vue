@@ -11,11 +11,11 @@ const currentPage = ref(1);
 const totalResults = ref(0);
 
 const runtimeConfig = useRuntimeConfig();
-initClient(runtimeConfig.public.pexelsApiKey);
 
 const photos = ref<Photo[]>([]);
 
 onMounted(() => {
+	initClient(runtimeConfig.public.pexelsApiKey);
 	mounted.value = true;
 	registerScroll();
 })
