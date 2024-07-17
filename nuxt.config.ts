@@ -33,5 +33,8 @@ export default defineNuxtConfig({
 		{ src: '~/plugins/vue-spinner', mode: 'client' }
 	],
 
-    modules: ["nuxt-feather-icons"]
+    modules: ["nuxt-feather-icons"],
+	build: {
+		transpile: ['esm-require'],
+	},
 })
