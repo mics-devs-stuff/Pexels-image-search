@@ -34,7 +34,5 @@ export default defineNuxtConfig({
 	],
 
     modules: ["nuxt-feather-icons"],
-	build: {
-		transpile: ['esm-require'],
-	},
+  	ssr: false,
 })
