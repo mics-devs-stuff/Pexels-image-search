@@ -15,7 +15,11 @@ const runtimeConfig = useRuntimeConfig();
 const photos = ref<Photo[]>([]);
 
 onMounted(() => {
-	initClient(runtimeConfig.public.pexelsApiKey);
+	try {
+		initClient(runtimeConfig.public.pexelsApiKey);
+	} catch (err) {
+		console.log(err);
+	}
 	mounted.value = true;
 	registerScroll();
 })
