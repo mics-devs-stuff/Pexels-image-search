@@ -33,4 +33,8 @@ export default defineNuxtConfig({
 	],
 
     modules: ["nuxt-feather-icons"],
+
+	build: {
+		transpile: ['pexels']
+	}
 })
