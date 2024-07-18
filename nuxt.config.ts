@@ -25,7 +25,7 @@ export default defineNuxtConfig({
 			script: [
 				{ src: 'https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js' },
 			],
-		}
+		},
 	},
 
     plugins: [
@@ -34,4 +34,7 @@ export default defineNuxtConfig({
 	],
 
     modules: ["nuxt-feather-icons"],
+	nitro: {
+		preset: 'github-pages'
+	}
 })

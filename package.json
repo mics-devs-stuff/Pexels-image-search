@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "export": "nuxt export",
+    "deploy": "git add . && git commit -m 'Deploy to GitHub Pages' && git push origin gh-pages"
   },
   "dependencies": {
     "@yeger/vue-masonry-wall": "^5.0.12",
