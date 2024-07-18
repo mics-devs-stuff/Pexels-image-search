@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ErrorResponse, PaginationParams, Photo, PhotosWithTotalResults } from 'pexels';
+import type { ErrorResponse, PaginationParams, Photo, PhotosWithTotalResults } from '~/utils/api/pexels-lib/main';
 import { initClient, searchPhotos } from '~/utils/api/pexels.service';
 import { DotLoader } from 'vue3-spinner';
 

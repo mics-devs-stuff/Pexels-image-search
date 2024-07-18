@@ -20,14 +20,6 @@ export default defineNuxtConfig({
 		},
 	},
 
-    app: {
-		head: {
-			script: [
-				{ src: 'https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js' },
-			],
-		}
-	},
-
     plugins: [
 		{ src: '~/plugins/vue-masonry', mode: 'client' }
 	],
@@ -35,6 +27,6 @@ export default defineNuxtConfig({
     modules: ["nuxt-feather-icons"],
 
 	build: {
-		transpile: ['pexels']
-	}
+		transpile: ['pexels'],
+	},
 })
