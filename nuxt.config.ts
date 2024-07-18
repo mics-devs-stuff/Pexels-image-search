@@ -29,8 +29,7 @@ export default defineNuxtConfig({
 	},
 
     plugins: [
-		{ src: '~/plugins/vue-masonry', mode: 'client' },
-		{ src: '~/plugins/vue-spinner', mode: 'client' }
+		{ src: '~/plugins/vue-masonry', mode: 'client' }
 	],
 
     modules: ["nuxt-feather-icons"],
